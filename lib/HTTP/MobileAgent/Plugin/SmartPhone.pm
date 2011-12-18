@@ -26,6 +26,11 @@ sub HTTP::MobileAgent::is_android {
     shift->user_agent =~ /Android/;
 }
 
+sub HTTP::MobileAgent::is_android_tablet {
+    my $self = shift;
+    $self->is_android && $self->user_agent !~ /Mobile/
+}
+
 sub HTTP::MobileAgent::ios_full_version {
     my $self = shift;
     return () unless $self->is_ios;
@@ -43,6 +48,10 @@ sub HTTP::MobileAgent::ios_version {
     $version;
 }
 
+sub HTTP::MobileAgent::is_tablet {
+    my $self = shift;
+    $self->is_ipad || $self->is_android_tablet;
+}
 
 1;
 __END__
