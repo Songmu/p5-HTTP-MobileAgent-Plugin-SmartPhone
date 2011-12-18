@@ -40,7 +40,7 @@ Mozilla/5.0 (iPod; U; CPU iPhone OS 2_1 like Mac OS X; ja-jp) AppleWebKit/525.18
 --- expected yaml
 is_ios: 1
 is_ipad: ~
-is_iphone: 1
+is_iphone: ~
 ios_version: 2
 ios_full_version: 2_1
 
