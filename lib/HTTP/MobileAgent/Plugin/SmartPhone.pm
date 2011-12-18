@@ -11,7 +11,7 @@ sub HTTP::MobileAgent::is_smartphone {
 
 sub HTTP::MobileAgent::is_ios {
     my $self = shift;
-    $self->user_agent =~ /iP(?:one|od|ad)/;
+    $self->user_agent =~ /iP(?:hone|od|ad)/;
 }
 
 sub HTTP::MobileAgent::is_iphone {
