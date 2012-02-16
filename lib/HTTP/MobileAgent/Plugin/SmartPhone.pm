@@ -62,11 +62,72 @@ HTTP::MobileAgent::Plugin::SmartPhone -
 
 =head1 SYNOPSIS
 
-  use HTTP::MobileAgent::Plugin::SmartPhone;
+    use HTTP::MobileAgent;
+    use HTTP::MobileAgent::Plugin::SmartPhone;
+
+    my $agent = HTTP::MobileAgent->new;
+    if ($agent->is_smartphone) {
+        if ($agent->i_ios) {
+            if ($agent->is_iphone) {
+                ...
+            }
+            elsif ($agent->is_ipod) {
+                ...
+            }
+            elsif ($agent->is_ipad) {
+                ...
+            }
+        }
+        elsif ($agent->is_android) {
+            if ($agent->is_android_tablet) {
+                ...
+            }
+            else {
+                ...
+            }
+        }
+    }
+    $agent->ios_version;      # eg. 5
+    $agent->ios_full_version; # eg. 5_0_1
+
 
 =head1 DESCRIPTION
 
-HTTP::MobileAgent::Plugin::SmartPhone is
+HTTP::MobileAgent::Plugin::SmartPhone is a plugin of HTTP::MobileAgent for detecting smartphone.
+
+=head1 METHODS
+
+=item is_smartphone
+
+    True if ios or android.
+
+=item is_ios
+
+    Checking iOS or not. Including iPhone, iPod and iPad.
+
+=item is_iphone
+=item is_ipod
+=item is_ipad
+
+=item ios_version
+
+    iOS major version. ex. 5.
+    undef unless iOS.
+
+=item ios_full_version
+
+    iOS full version. ex. 5_0_1.
+    undef unless iOS.
+
+=item is_android
+
+=item is_android_tablet
+
+    experimental.
+
+=item is_tablet
+
+    experimental.
 
 =head1 AUTHOR
 
