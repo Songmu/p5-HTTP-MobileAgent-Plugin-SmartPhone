@@ -58,7 +58,7 @@ __END__
 
 =head1 NAME
 
-HTTP::MobileAgent::Plugin::SmartPhone -
+HTTP::MobileAgent::Plugin::SmartPhone - Plugin of HTTP::MobileAgent for detecting smartphone
 
 =head1 SYNOPSIS
 
@@ -67,7 +67,7 @@ HTTP::MobileAgent::Plugin::SmartPhone -
 
     my $agent = HTTP::MobileAgent->new;
     if ($agent->is_smartphone) {
-        if ($agent->i_ios) {
+        if ($agent->is_ios) {
             if ($agent->is_iphone) {
                 ...
             }
@@ -99,11 +99,11 @@ HTTP::MobileAgent::Plugin::SmartPhone is a plugin of HTTP::MobileAgent for detec
 
 =item is_smartphone
 
-    True if ios or android.
+True if ios or android.
 
 =item is_ios
 
-    Checking iOS or not. Including iPhone, iPod and iPad.
+Checking iOS or not. Including iPhone, iPod and iPad.
 
 =item is_iphone
 =item is_ipod
@@ -111,23 +111,23 @@ HTTP::MobileAgent::Plugin::SmartPhone is a plugin of HTTP::MobileAgent for detec
 
 =item ios_version
 
-    iOS major version. ex. 5.
-    undef unless iOS.
+iOS major version. ex. 5.
+undef unless iOS.
 
 =item ios_full_version
 
-    iOS full version. ex. 5_0_1.
-    undef unless iOS.
+iOS full version. ex. 5_0_1.
+undef unless iOS.
 
 =item is_android
 
 =item is_android_tablet
 
-    experimental.
+experimental.
 
 =item is_tablet
 
-    experimental.
+experimental.
 
 =head1 AUTHOR
 
