@@ -8,3 +8,8 @@ __DATA__
 Masayuki Matsuki
 y.songmu@gmail.com
 HTTP::MobileAgent::Plugin::SmartPhone
+iOS
+ios
+iPad
+iPhone
+smartphone

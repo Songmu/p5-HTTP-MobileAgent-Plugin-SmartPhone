@@ -2,7 +2,7 @@ package HTTP::MobileAgent::Plugin::SmartPhone;
 use strict;
 use warnings;
 use utf8;
-our $VERSION = '0.012';
+our $VERSION = '0.013';
 
 sub HTTP::MobileAgent::is_smartphone {
     my $self = shift;
@@ -97,6 +97,8 @@ HTTP::MobileAgent::Plugin::SmartPhone is a plugin of HTTP::MobileAgent for detec
 
 =head1 METHODS
 
+=over
+
 =item is_smartphone
 
 True if ios or android.
@@ -106,7 +108,9 @@ True if ios or android.
 Checking iOS or not. Including iPhone, iPod and iPad.
 
 =item is_iphone
+
 =item is_ipod
+
 =item is_ipad
 
 =item ios_version
@@ -128,6 +132,8 @@ experimental.
 =item is_tablet
 
 experimental.
+
+=back
 
 =head1 AUTHOR
 
