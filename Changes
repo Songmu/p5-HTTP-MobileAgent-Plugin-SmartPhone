@@ -1,5 +1,8 @@
 Revision history for Perl extension HTTP::MobileAgent::Plugin::SmartPhone
 
+0.013   Sat Feb 21 22:44:00 2012
+        - fix pod
+
 0.012   Sat Feb 18 15:06:06 2012
         - add requires 'HTTP::MobileAgent'
 
