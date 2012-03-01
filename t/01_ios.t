@@ -15,7 +15,7 @@ sub check_agent {
     local $ENV{HTTP_USER_AGENT} = shift;
     my $agent = HTTP::MobileAgent->new;
     my $result = {};
-    for my $meth (qw/is_ios is_ipad is_iphone ios_version ios_full_version/){
+    for my $meth (qw/is_ios is_ipad is_ipod is_iphone ios_version ios_full_version/){
         $result->{$meth} = $agent->$meth || undef;
     }
     $result;
@@ -30,6 +30,7 @@ Mozilla/5.0 (iPod; U; CPU like Mac OS X; en) AppleWebKit/420.1 (KHTML, like Geck
 --- expected yaml
 is_ios: 1
 is_ipad: ~
+is_ipod: 1
 is_iphone: ~
 ios_version: 1
 ios_full_version: 1
@@ -40,6 +41,7 @@ Mozilla/5.0 (iPod; U; CPU iPhone OS 2_1 like Mac OS X; ja-jp) AppleWebKit/525.18
 --- expected yaml
 is_ios: 1
 is_ipad: ~
+is_ipod: 1
 is_iphone: ~
 ios_version: 2
 ios_full_version: 2_1
@@ -50,6 +52,7 @@ Mozilla/5.0 (iPhone; U; CPU like Mac OS X; en) AppleWebKit/420+ (KHTML, like Gec
 --- expected yaml
 is_ios: 1
 is_ipad: ~
+is_ipod: ~
 is_iphone: 1
 ios_version: 1
 ios_full_version: 1
@@ -60,6 +63,7 @@ Mozilla/5.0 (iPhone; U; CPU iPhone OS 2_1 like Mac OS X; ja-jp) AppleWebKit/525.
 --- expected yaml
 is_ios: 1
 is_ipad: ~
+is_ipod: ~
 is_iphone: 1
 ios_version: 2
 ios_full_version: 2_1
@@ -70,6 +74,7 @@ Mozilla/5.0 (iPad; CPU OS 5_0_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like G
 --- expected yaml
 is_ios: 1
 is_ipad: 1
+is_ipod: ~
 is_iphone: ~
 ios_version: 5
 ios_full_version: 5_0_1
@@ -80,6 +85,7 @@ hogehoge
 --- expected yaml
 is_ios: ~
 is_ipad: ~
+is_ipod: ~
 is_iphone: ~
 ios_version: ~
 ios_full_version: ~
