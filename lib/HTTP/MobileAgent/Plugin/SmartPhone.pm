@@ -22,6 +22,10 @@ sub HTTP::MobileAgent::is_ipad {
     shift->user_agent =~ /\(iPad/;
 }
 
+sub HTTP::MobileAgent::is_ipod {
+    shift->user_agent =~ /\(iPod/;
+}
+
 sub HTTP::MobileAgent::is_android {
     shift->user_agent =~ /Android/;
 }
