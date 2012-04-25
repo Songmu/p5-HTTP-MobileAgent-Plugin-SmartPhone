@@ -2,7 +2,7 @@ package HTTP::MobileAgent::Plugin::SmartPhone;
 use strict;
 use warnings;
 use utf8;
-our $VERSION = '0.014';
+our $VERSION = '0.02';
 
 sub HTTP::MobileAgent::is_smartphone {
     my $self = shift;
@@ -55,6 +55,19 @@ sub HTTP::MobileAgent::ios_version {
 sub HTTP::MobileAgent::is_tablet {
     my $self = shift;
     $self->is_ipad || $self->is_android_tablet;
+}
+
+sub HTTP::MobileAgent::android_full_version {
+    my $self = shift;
+    return () unless $self->is_android;
+
+    my ($full_version) = $self->user_agent =~ /Android\s*([0-9\.]+).*?;/;
+    $full_version;
+}
+
+sub HTTP::MobileAgent::android_version {
+    my ($version) = (shift->android_full_version || '') =~ /^((?:\d+)(?:\.\d+)?)/;
+    $version;
 }
 
 1;

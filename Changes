@@ -1,5 +1,8 @@
 Revision history for Perl extension HTTP::MobileAgent::Plugin::SmartPhone
 
+0.02    Thu Apr 25 08:00:00 2012
+        - add method android(_full)?_version for detecting android version.
+
 0.014   Thu Mar 01 05:02:00 2012
         - add missing method "is_ipod". Thanks to bokutin. fixes #1
 
