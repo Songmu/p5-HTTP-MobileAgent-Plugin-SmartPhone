@@ -2,7 +2,7 @@ package HTTP::MobileAgent::Plugin::SmartPhone;
 use strict;
 use warnings;
 use utf8;
-our $VERSION = '0.02';
+our $VERSION = '0.021';
 
 sub HTTP::MobileAgent::is_smartphone {
     my $self = shift;

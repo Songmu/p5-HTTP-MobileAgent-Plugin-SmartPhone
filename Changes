@@ -1,5 +1,8 @@
 Revision history for Perl extension HTTP::MobileAgent::Plugin::SmartPhone
 
+0.021   Tue Oct 30 02:39:00 2012
+        - bundle Module::Install 1.06.
+
 0.02    Thu Apr 25 08:00:00 2012
         - add method android(_full)?_version for detecting android version.
 
