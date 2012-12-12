@@ -11,23 +11,37 @@ sub HTTP::MobileAgent::is_smartphone {
 
 sub HTTP::MobileAgent::is_ios {
     my $self = shift;
-    $self->user_agent =~ /\(iP(?:hone|od|ad)/;
+
+    my $ua = $self->user_agent || '';
+    $ua =~ /\(iP(?:hone|od|ad)/;
 }
 
 sub HTTP::MobileAgent::is_iphone {
-    shift->user_agent =~ /\(iPhone/;
+    my $self = shift;
+
+    my $ua = $self->user_agent || '';
+    $ua =~ /\(iPhone/;
 }
 
 sub HTTP::MobileAgent::is_ipad {
-    shift->user_agent =~ /\(iPad/;
+    my $self = shift;
+
+    my $ua = $self->user_agent || '';
+    $ua =~ /\(iPad/;
 }
 
 sub HTTP::MobileAgent::is_ipod {
-    shift->user_agent =~ /\(iPod/;
+    my $self = shift;
+
+    my $ua = $self->user_agent || '';
+    $ua =~ /\(iPod/;
 }
 
 sub HTTP::MobileAgent::is_android {
-    shift->user_agent =~ /Android/;
+    my $self = shift;
+
+    my $ua = $self->user_agent || '';
+    $ua =~ /Android/;
 }
 
 sub HTTP::MobileAgent::is_android_tablet {
