@@ -1,5 +1,8 @@
 Revision history for Perl extension HTTP::MobileAgent::Plugin::SmartPhone
 
+0.03    Tue Dec 12 11:48:00 2012
+        - fix warnings when User-Agent is empty.
+
 0.021   Tue Oct 30 02:39:00 2012
         - bundle Module::Install 1.06.
 
